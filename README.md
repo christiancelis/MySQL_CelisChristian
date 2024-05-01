@@ -10,4 +10,19 @@
 - 2 OCTETOS DE RED Y DOS DE HOST
 
 IP BETTY VIRTUAL MACHINE CAMPUS: 172.16.101.128
-  
+ssh p4student@172.16.101.128
+contraseña: p4student o cedula
+
+broken file-> se rompio la conexion
+refuse-> se equivoco contraseña
+
+cambiar contraseña en linux passwd
+
+nueva contraseña cedula
+clear
+exit
+pwd mirar la ruta absoluta
+touch crear carpeta
+
+
+
