@@ -15,11 +15,11 @@ contraseña: p4student o cedula
     cambiar contraseña en linux passwd
     Comandos linux
 
- ```sql
- clear
--exit
--pwd mirar la ruta absoluta
--touch crear carpeta 
+ ```bash
+clear
+exit
+pwd mirar la ruta absoluta
+touch crear carpeta 
 ```
 
 
