@@ -13,7 +13,7 @@ IP BETTY VIRTUAL MACHINE CAMPUS:
 contraseña: p4student o cedula
 
     cambiar contraseña en linux passwd
-    Comandos linux
+    Comandos linux -
 
  ```bash
 clear
