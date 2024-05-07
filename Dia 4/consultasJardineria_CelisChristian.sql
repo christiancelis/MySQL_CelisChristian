@@ -84,6 +84,10 @@ where fechaEntrega <= ADDDATE(fechaEsperada, INTERVAL -2 DAY);
 -- Utilizando la función DATEDIFF de MySQL.
 -- ¿Sería posible resolver esta consulta utilizando el operador de suma + o resta -?
 
+select codigoPedido,codigoCliente,fechaEsperada,
+fechaEntrega, (day(fechaEntrega)-day(fechaEsperada)) as diferencia
+from pedido
+where  day(fechaEntrega)-day(fechaEsperada) <= -2 and month(fechaEntrega) <= month(fechaEsperada) ;
 
 
 -- Devuelve un listado de todos los pedidos que fueron en 2009.
