@@ -81,15 +81,10 @@ fechaEntrega
 from pedido
 where fechaEntrega <= ADDDATE(fechaEsperada, INTERVAL -2 DAY);
 
-
 -- Utilizando la función DATEDIFF de MySQL.
-
-
 -- ¿Sería posible resolver esta consulta utilizando el operador de suma + o resta -?
 
 
-
----------------------------------
 
 -- Devuelve un listado de todos los pedidos que fueron en 2009.
 
@@ -197,3 +192,15 @@ where p.fechaEntrega > p.fechaEsperada and p.estado="Entregado";
 
 -- Devuelve un listado de las diferentes gamas de producto que ha comprado cada cliente.
 
+select c.nombreCliente, gp.gama, count(gp.gama) as "Numero de productos"
+from cliente as c 
+INNER JOIN pedido as p on p.codigoCliente = c.codigoCliente
+inner join detalle_pedido as dt on dt.codigoPedido = p.codigoPedido
+inner join producto as pro on pro.idProducto = dt.codigoProducto
+inner join gama_producto as gp on gp.gama = pro.gama
+group by c.nombreCliente, gp.gama
+order by c.nombreCLiente;
+
+
+---- Desarrollado por christian celis;
+-- 1.***.***.441.
