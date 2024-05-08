@@ -82,6 +82,12 @@ from pedido
 where fechaEntrega <= ADDDATE(fechaEsperada, INTERVAL -2 DAY);
 
 -- Utilizando la función DATEDIFF de MySQL.
+select codigoPedido,codigoCliente,fechaEsperada,
+fechaEntrega
+from pedido
+where datediff(fechaEntrega,fechaEsperada)>=2;
+
+
 -- ¿Sería posible resolver esta consulta utilizando el operador de suma + o resta -?
 
 select codigoPedido,codigoCliente,fechaEsperada,
